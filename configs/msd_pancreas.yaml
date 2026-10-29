@@ -1,0 +1,48 @@
+seed: 2026
+roi_mm:
+- 40.0
+- 48.0
+- 48.0
+maxima_per_map: 8
+uniform_samples: 8
+context_samples: 8
+context_support_threshold: 0.05
+ucrp:
+  epochs: 120
+  batch_size: 512
+  pair_attempts: 256
+  rank_margin: 0.01
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip: 5.0
+  hidden_units:
+  - 128
+  - 64
+  dropout: 0.1
+expert:
+  epochs: 120
+  batch_size: 2
+  base_width: 24
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  gradient_clip: 12.0
+  class_weights:
+  - 0.5
+  - 1.0
+  - 3.0
+  negative_to_positive_ratio: 0.3
+  missing_threshold: 0.3
+  existing_threshold: 0.6
+pcsc:
+  threshold: 0.5
+  n_estimators: 1000
+  max_depth: 4
+  min_samples_leaf: 8
+  seed_base: 20260820
+  n_jobs: 1
+  minimum_dice_gain: 0.005
+  minimum_nsd_gain: -0.01
+  recovered_miss_weight: 3.0
+  severe_harm_weight: 2.5
+  moderate_harm_weight: 1.5
+  default_weight: 1.0

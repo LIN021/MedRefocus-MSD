@@ -1,0 +1,47 @@
+# Local datasets, predictions, checkpoints and patient-level outputs
+data/
+upstream/
+runs/
+models/
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+*.nii
+*.nii.gz
+*.npz
+*.npy
+*.pt
+*.pth
+*.safetensors
+*.pkl
+*.pickle
+*.joblib
+*.csv
+!results/paper_msd_summary.csv
+!examples/manifest_schema.csv
+splits*.json
+*training_contract.json
+*inference_records.json
+*patients.json
+# Credentials and machine configuration
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+# Python / editors
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/

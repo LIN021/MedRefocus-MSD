@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software when using the MSD implementation."
+title: "MedRefocus: MSD Pancreas implementation"
+type: software
+authors:
+  - name: "MedRefocus contributors"
+version: 0.1.0
+date-released: 2026-10-29
+repository-code: "https://github.com/LIN021/MedRefocus-MSD"
+license: MIT
