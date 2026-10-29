@@ -2,6 +2,10 @@
 
 本仓库公开 MedRefocus 在 MSD 胰腺 CT 上的实现，包括候选区域生成、37 维 UCRP 排序、四通道 3D Local Expert、118 维 PCSC 提交与原始空间评价。
 
+![MedRefocus 主方法图：UCRP 选取一个区域，Local Expert 生成 add-only 提案，PCSC 接受提案或保留完整 Global 预测。](assets/medrefocus_framework.png)
+
+*选取一个区域、调用一次局部专家，接受完整提案或回退到完整 Global 预测。* [SVG 矢量图](assets/medrefocus_framework.svg) · [PDF](assets/medrefocus_framework.pdf)
+
 每例只调用一次局部专家。Auxiliary 参与选区；专家直接输入为 CT 与 Global 的概率和硬标签。局部提案只新增肿瘤体素，PCSC 接受完整提案或保留完整原始 Global 预测。新增体素仍可能是假阳性。
 
 ## 使用

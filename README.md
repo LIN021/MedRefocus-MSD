@@ -7,6 +7,10 @@
 
 This repository contains the MSD Pancreas implementation of MedRefocus: candidate region generation, **UCRP** ranking, a focused **3D local expert**, **PCSC** commitment, and native-grid evaluation. [中文说明](README.zh-CN.md).
 
+![MedRefocus framework: UCRP selects one region, a local expert produces an add-only proposal, and PCSC accepts the proposal or retains the complete Global prediction.](assets/medrefocus_framework.png)
+
+*One selected region, one local expert call, and proposal-level commitment with a protected Global fallback.* [Vector SVG](assets/medrefocus_framework.svg) · [PDF](assets/medrefocus_framework.pdf)
+
 ## How it works
 
 1. **Observe.** A Global nnU-Net and a separately trained Auxiliary observer produce whole-volume probability fields.
